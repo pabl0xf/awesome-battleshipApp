@@ -1,0 +1,29 @@
+{
+  "name": "awesome-battleshipApp",
+  "version": "1.0.0",
+  "description": "An awesome battleship game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pabl0xf/awesome-battleshipApp.git"
+  },
+  "keywords": [
+    "Battleship",
+    "Express",
+    "Angular"
+  ],
+  "author": "Pablo Frias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pabl0xf/awesome-battleshipApp/issues"
+  },
+  "homepage": "https://github.com/pabl0xf/awesome-battleshipApp",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3"
+  }
+}

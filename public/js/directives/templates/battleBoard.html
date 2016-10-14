@@ -1,0 +1,19 @@
+<div class="col-md-6 map-container">
+  <div class="map-board board">
+    <div ng-repeat="item in map track by $index" ng-class="{'markRed':item==2, 'markOrange':item==3}" data-fleet-index="{{$index}}" ng-mouseover="hoverSiblings($index)" ng-mouseout="outSiblings($index)" class="item" ng-click="addShip($index)">{{item}}</div>
+  </div>
+  <br><br>
+  <button class="btn btn-default active" ng-disabled="battleShipKinds.destroyerInPlace" ng-click="selectShip(2,'destroyerInPlace')">Destroyer</button>
+  <br><br>
+  <button class="btn btn-default active" ng-disabled="battleShipKinds.cruiserInPlace" ng-click="selectShip(3,'cruiserInPlace')">Cruiser</button>
+  <br><br>
+  <button class="btn btn-default active" ng-disabled="battleShipKinds.submarineInPlace" ng-click="selectShip(3,'submarineInPlace')">Submarine</button>
+  <br><br>
+  <button class="btn btn-default active" ng-click="rotateShip()"><span class="glyphicon glyphicon-sort"  aria-hidden="true"></span> Rotate ship</button>
+</div>
+<div class="col-md-6 shoots-container" ng-if="shootsContainer">
+  <div class="shoots-board board">
+    <div ng-repeat="item in shoots track by $index" class="item" ng-class="{'markRed':item==1}" ng-click="markShoot($event)" data-shoot-index="{{$index}}">{{item}}</div>
+  </div>
+  <button class="btn btn-primary" ng-disabled="turn != userId" ng-click="makeShoot()"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>Shoot</button>
+</div>
